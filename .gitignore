@@ -1,0 +1,69 @@
+
+
+Pods/Target Support Files/Pods/Pods.release.xcconfig
+
+Pods/Target Support Files/Pods/Pods.debug.xcconfig
+
+Pods/Target Support Files/Pods/Pods-resources.sh
+
+Pods/Target Support Files/Pods/Pods-frameworks.sh
+
+Pods/Target Support Files/Pods/Pods-dummy.m
+
+Pods/Target Support Files/Pods/Pods-acknowledgements.plist
+
+Pods/Target Support Files/Pods/Pods-acknowledgements.markdown
+
+Pods/Target Support Files/Pods/Pods-acknowledgements.markdown
+
+Pods/Pods.xcodeproj/xcuserdata/ruanqiaohua.xcuserdatad/xcschemes/xcschememanagement.plist
+
+Pods/Pods.xcodeproj/xcuserdata/ruanqiaohua.xcuserdatad/xcschemes/Pods.xcscheme
+
+Pods/Pods.xcodeproj/project.pbxproj
+
+Pods/MobileVLCKit/MobileVLCKit-binary/MobileVLCKit.framework/MobileVLCKit
+
+Pods/MobileVLCKit/MobileVLCKit-binary/MobileVLCKit.framework/Headers/VLCTime.h
+
+Pods/MobileVLCKit/MobileVLCKit-binary/MobileVLCKit.framework/Headers/VLCMediaThumbnailer.h
+
+Pods/MobileVLCKit/MobileVLCKit-binary/MobileVLCKit.framework/Headers/VLCMediaPlayer.h
+
+Pods/MobileVLCKit/MobileVLCKit-binary/MobileVLCKit.framework/Headers/VLCMediaListPlayer.h
+
+Pods/MobileVLCKit/MobileVLCKit-binary/MobileVLCKit.framework/Headers/VLCMediaList.h
+
+Pods/MobileVLCKit/MobileVLCKit-binary/MobileVLCKit.framework/Headers/VLCMediaDiscoverer.h
+
+Pods/MobileVLCKit/MobileVLCKit-binary/MobileVLCKit.framework/Headers/VLCMedia.h
+
+Pods/MobileVLCKit/MobileVLCKit-binary/MobileVLCKit.framework/Headers/VLCLibrary.h
+
+Pods/MobileVLCKit/MobileVLCKit-binary/MobileVLCKit.framework/Headers/VLCAudio.h
+
+Pods/MobileVLCKit/MobileVLCKit-binary/MobileVLCKit.framework/Headers/MobileVLCKit.h
+
+Pods/MobileVLCKit/MobileVLCKit-binary/COPYING.txt
+
+Pods/Manifest.lock
+
+Pods/Headers/Public/MobileVLCKit/MobileVLCKit/VLCTime.h
+
+Pods/Headers/Public/MobileVLCKit/MobileVLCKit/VLCMediaThumbnailer.h
+
+Pods/Headers/Public/MobileVLCKit/MobileVLCKit/VLCMediaPlayer.h
+
+Pods/Headers/Public/MobileVLCKit/MobileVLCKit/VLCMediaListPlayer.h
+
+Pods/Headers/Public/MobileVLCKit/MobileVLCKit/VLCMediaList.h
+
+Pods/Headers/Public/MobileVLCKit/MobileVLCKit/VLCMediaDiscoverer.h
+
+Pods/Headers/Public/MobileVLCKit/MobileVLCKit/VLCMedia.h
+
+Pods/Headers/Public/MobileVLCKit/MobileVLCKit/VLCLibrary.h
+
+Pods/Headers/Public/MobileVLCKit/MobileVLCKit/VLCAudio.h
+
+Pods/Headers/Public/MobileVLCKit/MobileVLCKit/MobileVLCKit.h

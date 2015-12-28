@@ -16,6 +16,7 @@
 		1EC298901C31351F0095A022 /* VLCKit.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1EC2988F1C31351F0095A022 /* VLCKit.mm */; };
 		1EC298921C313AF40095A022 /* PlayerUrl.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1EC298911C313AF40095A022 /* PlayerUrl.plist */; };
 		8A5F3B3D42B7DEDCD9B71F46 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 835DB06E017615ACB2E6F59E /* libPods.a */; };
+		F12E45E91C315743009E8075 /* MorePlayerUrlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F12E45E81C315743009E8075 /* MorePlayerUrlViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		835DB06E017615ACB2E6F59E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B856897B8ED3D55CA03F3880 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D453C7390290D4BE04D14D6E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F12E45E71C315743009E8075 /* MorePlayerUrlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MorePlayerUrlViewController.h; sourceTree = "<group>"; };
+		F12E45E81C315743009E8075 /* MorePlayerUrlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MorePlayerUrlViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,8 @@
 		1E29863B1C2D2BA40072084C /* MobileVLC */ = {
 			isa = PBXGroup;
 			children = (
+				F12E45E31C3152EE009E8075 /* Tool */,
+				F12E45E41C315346009E8075 /* Classes */,
 				1E29863F1C2D2BA40072084C /* AppDelegate.h */,
 				1E2986401C2D2BA40072084C /* AppDelegate.m */,
 				1E2986421C2D2BA40072084C /* ViewController.h */,
@@ -109,6 +114,38 @@
 				835DB06E017615ACB2E6F59E /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F12E45E31C3152EE009E8075 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		F12E45E41C315346009E8075 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F12E45E51C315393009E8075 /* Mobile */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F12E45E51C315393009E8075 /* Mobile */ = {
+			isa = PBXGroup;
+			children = (
+				F12E45E61C315703009E8075 /* MorePlayerUrl */,
+			);
+			path = Mobile;
+			sourceTree = "<group>";
+		};
+		F12E45E61C315703009E8075 /* MorePlayerUrl */ = {
+			isa = PBXGroup;
+			children = (
+				F12E45E71C315743009E8075 /* MorePlayerUrlViewController.h */,
+				F12E45E81C315743009E8075 /* MorePlayerUrlViewController.m */,
+			);
+			path = MorePlayerUrl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +275,7 @@
 				1E2986411C2D2BA40072084C /* AppDelegate.m in Sources */,
 				1EC298901C31351F0095A022 /* VLCKit.mm in Sources */,
 				1E29863E1C2D2BA40072084C /* main.m in Sources */,
+				F12E45E91C315743009E8075 /* MorePlayerUrlViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
