@@ -7,6 +7,7 @@
 //
 
 #import "MorePlayerUrlViewController.h"
+#define TableView_W 120
 
 @interface MorePlayerUrlViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) UITableView *tableView;
@@ -24,10 +25,11 @@ static NSString *CellIdentifier = @"CellIdentifier";
     
     _playerUrls = [self backPlayerUrls];
     
-    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(-100, 0, 100, self.view.frame.size.height)];
+    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(-TableView_W, 0, TableView_W, self.view.frame.size.height)];
     _tableView.backgroundColor = [UIColor clearColor];
     _tableView.delegate = self;
     _tableView.dataSource = self;
+    _tableView.separatorColor = [UIColor clearColor];
     _tableView.tableFooterView = [UIView new];
     [self.view addSubview:_tableView];
     
@@ -44,14 +46,14 @@ static NSString *CellIdentifier = @"CellIdentifier";
 - (void)tableViewShow
 {
     [UIView animateWithDuration:0.2 animations:^{
-        _tableView.frame = CGRectMake(0, 0, 100, self.view.frame.size.height);
+        _tableView.frame = CGRectMake(0, 0, TableView_W, self.view.frame.size.height);
     }];
 }
 
 - (void)tableViewHidden
 {
     [UIView animateWithDuration:0.2 animations:^{
-        _tableView.frame = CGRectMake(-100, 0, 100, self.view.frame.size.height);
+        _tableView.frame = CGRectMake(-TableView_W, 0, TableView_W, self.view.frame.size.height);
     }completion:^(BOOL finished) {
         [self dismissViewControllerAnimated:NO completion:nil];
     }];
