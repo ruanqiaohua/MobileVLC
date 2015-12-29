@@ -12,11 +12,12 @@
 
 #define playerDefaultUrl @"rtmp://live.hkstv.hk.lxdns.com/live/hks"
 
-@interface ViewController ()<MorePlayerUrlViewControllerDelegate>
+@interface ViewController ()<VLCMediaPlayerDelegate,MorePlayerUrlViewControllerDelegate>
 @property (strong, nonatomic) VLCMediaPlayer *mediaplayer;
 @property (strong, nonatomic) UIView *playerView;
 @property (strong, nonatomic) UIButton *moreBtn;
 @property (assign, nonatomic) BOOL cancelHidden;
+@property (strong, nonatomic) UIActivityIndicatorView *mediaplayerActivityIndicatorView;
 @end
 
 @implementation ViewController
@@ -27,12 +28,17 @@
     _playerView = [[UIView alloc]initWithFrame:self.view.bounds];
     _playerView.backgroundColor = [UIColor blackColor];
     [self.view addSubview:_playerView];
-   
+    
+    _mediaplayerActivityIndicatorView = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    _mediaplayerActivityIndicatorView.center = self.view.center;
+    [self.view addSubview:_mediaplayerActivityIndicatorView];
+    
     _moreBtn = [UIButton buttonWithType:UIButtonTypeSystem];
     _moreBtn.frame = CGRectMake(0, 0, 50, 30);
     [_moreBtn setTitle:@"更多" forState:UIControlStateNormal];
     [_moreBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.view addSubview:_moreBtn];
+    
     [_moreBtn addTarget:self action:@selector(moreBtnDidClick:) forControlEvents:UIControlEventTouchUpInside];
     [_moreBtn setHidden:YES];
 
@@ -43,6 +49,7 @@
 
 - (void)mediaplayerPlay:(NSString *)playerUrl
 {
+    [_mediaplayerActivityIndicatorView startAnimating];
     _mediaplayer = [[VLCMediaPlayer alloc] init];
     _mediaplayer.delegate = self;
     _mediaplayer.drawable = _playerView;
@@ -85,6 +92,25 @@
 {
     [_mediaplayer stop];
     [self mediaplayerPlay:playerUrl];
+}
+
+#pragma mark - VLCMediaPlayerDelegate
+
+- (void)mediaPlayerStateChanged:(NSNotification *)aNotification
+{
+    VLCMediaPlayer *mediaplayer = [aNotification object];
+    switch (mediaplayer.state) {
+        case VLCMediaPlayerStateBuffering: {
+            [_mediaplayerActivityIndicatorView startAnimating];
+        }
+            break;
+        case VLCMediaPlayerStatePlaying: {
+            [_mediaplayerActivityIndicatorView stopAnimating];
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
